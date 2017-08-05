@@ -67,6 +67,7 @@ router.post('/', jsonParser, (request, response) => {
     if(!(field in request.body)) {
       const errorMessage = `Field ${field} is missing from request body.`;
       console.log(errorMessage);
+      // 400: bad request
       return response.status(400).send(errorMessage);
     } 
   }
@@ -88,12 +89,15 @@ router.put('/:id', jsonParser, (request, response) => {
     if(!(field in request.body)) {
       const errorMessage = `Field ${field} is missing from request body.`;
       console.log(errorMessage);
+      // 400: bad request
       return response.status(400).send(errorMessage);
     }
   }
 
+  // Check to make sure the request id and body id match
   if(request.params.id !== request.body.id) {
     const errorMessage = `Request id: ${request.params.id} and body id: ${request.body.id} must match`;
+    // 400: bad request
     return response.status(400).send(errorMessage);
   }
 
@@ -106,6 +110,7 @@ router.put('/:id', jsonParser, (request, response) => {
     publishDate: request.body.publishDate
   });
 
+  // 204: successful and no content to return with
   response.status(204).end();
   // ? Why no return here
 });

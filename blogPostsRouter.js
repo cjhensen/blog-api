@@ -118,6 +118,10 @@ router.put('/:id', jsonParser, (request, response) => {
 
 // DELETE: delete a blog post by id
 router.delete('/:id', (request, response) => {
+  BlogPosts.delete(request.params.id);
+  console.log(`Deleted blog post with id: ${request.params.id}`);
+  // 204: successful and no content to return with
+  response.status(204).end();
 });
 
 

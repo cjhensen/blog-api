@@ -18,6 +18,7 @@
   },
   "homepage": "https://github.com/cjhensen/super-duper-dollop#readme",
   "dependencies": {
-    "express": "^4.15.3"
+    "express": "^4.15.3",
+    "uuid": "^3.1.0"
   }
 }

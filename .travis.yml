@@ -1,0 +1,10 @@
+language: node_js
+node_js: node
+deploy:
+  provider: heroku
+  api_key:
+    secure: QW7HwhYFhyVgbkz4OytUfzGyQoZYLTflj/2OXX4PYnzlB9FIgFJiqO5qQDD8Nnqnm9AoRRO/AhHXA8ofQfS7XkUqdgrmXL27frpUQS06kSYI5VG8LTUtiK82FTnleIYS3kqCuzSWNc+/vW+si+9mwkMG2b1426NmU2ZDp3px9oqcCuf1tHZG1WGRyWXm2F8MRvkgaz6SqxCRO1tPosojWfEPzXq3zC6jfgqfxZpOhTWE5I1EZ1g27PxAD6JXioPL14RzGiTpC2h8mjhaa7jJbMIMxORsijELAaWr+MQIFj/j6ET4cxyUHG+VPYvxYv6SYNWr8r2q8tPfbjUoNuE0mXFPerkT6UuH5RBsHOwla3kvsgLFrft71katX2XscAjuXIuVPqp+ehdKQUjnpOpa/IU4tIwdcDGlLmxcGuIIQ11oBCNoBeZo5cTBlDIZMYIriNSLNMFOZaGc5ygBpJZXA7QarScvba9Y/B7INFVKy2kdSm5XCn9Tm/1fJNSCwsbdAodQfkHq8TY1xo1YBQBETdvSQorloZNt8K0h7bHr7bGHCF2r4cGcbJWTbCYI9I344vXdfAXnhRYR7+aowv/d6aoUqnwebBhvh59FCNyVVo62pISpQh/3WBmDqQebhpbZZ1FTU4dE6IxIc2Uo6Fn/c7FR+BlrXTPvvdqrd3XTOuI=
+  app: blog-api
+  on:
+    repo: cjhensen/blog-api
+    branch: master
